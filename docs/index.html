@@ -30,6 +30,7 @@
                         <li><a href="#about", onclick="smoothScroll('#about', 1000)">自己紹介</a></li>
                         <li><a href="#skills", onclick="smoothScroll('#skills', 1000)">Skills</a></li>
                         <li><a href="#abstract", onclick="smoothScroll('#abstract', 1000)">研究概要</a></li>
+                        <li><a href="#mediapipe", onclick="smoothScroll('#mediapipe', 1000)">手元のみバーチャル化計画</a></li>
                         <li><a href="#make", onclick="smoothScroll('#make', 1000)">制作物</a></li>
                         <li><a href="#contact", onclick="smoothScroll('#contact', 1000)">Contact</a></li>
                     </ul>
@@ -39,10 +40,10 @@
             <div class="mm">
                 <h2 id="home">Home</h2>
                 <p>ホームページに来ていただいてありがとうございます</p>
-                <p>ここには自己紹介と私が行っている研究概要について載せています</p>
+                <p>ここには自己紹介と私の研究など載せています</p>
                 <strike>研究概要は文字が多くて分かりにくいので読まなくても...</strike>
                 <p>ネオポルテ プライバシーポリシーの配色が白文字の白背景で読みにくいです</p>
-                <!-- <p>04/14追記: 開発計画を追加</p> -->
+                <p>04/15追記: 開発計画(手元のみバーチャル化計画)を追加</p>
 
 
                 <h2 id="about">自己紹介</h2>
@@ -53,11 +54,12 @@
 
                 <h2 id="skills">Skills</h2>
                 <ul>
-                    <li>HTML/CSS (簡単なホームページ作成)</li>
+                    <li>HTML/CSS/Javascript (簡単なホームページ作成)</li>
                     <li>python</li>
                     <li>AviUtl</li>
                     <li>機械学習(AI): 自然言語処理/画像処理/強化学習/遺伝的アルゴリズム</li>
                 </ul>
+
                 <h2 id="abstract">研究概要</h2>
                 <p>現在注目を集めている人工ニューラルネットワークは勾配法を基にした探索でパラメータの学習を行っている</p>
                 <p>勾配を利用した探索は局所的最適解に陥りやすく大域的最適解にならない場合がある</p>
@@ -92,8 +94,58 @@
                     <p>赤い点がエージェントで縦軸最小値になるように探索している様子</p>
                 </div>
                   
-                  
+                <h2 id="mediapipe">手元のみバーチャル化計画</h2>
+                    <h3>背景</h3>
+                    <p>今回この計画を立てた理由は、色々なVtuberさんが超美麗3Dと称して手元配信を見かけたのが始まりです</p>
+                    <p>最近でいえばchatgptなどとAIの発達が目覚ましいのですから手のみを変換することできるはずだ!!!知らんけど!!!</p>
+                    <h3>目的</h3>
+                    <p>手の認識技術がどうなっているのかの確認と実装</p>
+                    <h3>手法</h3>
+                    <p>Mediapipeと呼ばれる機械学習ライブラリーを使用することで手の認識ができるらしい</p>
 
+                    <div class="image-container">
+                        <img src="normal_hand.JPG"
+                            alt="Before"
+                            width="360"
+                            height="480"
+                            title="mediapipeに入れる前のただの手です"
+                        >
+                        <p>Before</p>
+                        <img src="mediapipe_hand.png"
+                        alt="After"
+                        width="360"
+                        height="480"
+                        title="Mediapipeを使用し手の座標を記している(ちょっと見にくいかも)"
+                        >
+                        <p>After</p>
+                    </div>
+                    <p>おぉ!ちゃんと手の形を認識してる!</p>
+                    <p>しかも少し手が隠れても予想してくれるモデルみたい</p>
+                    <div class="figure">
+                        <img src="mediapipe_3d.png"
+                             alt="手の3D座標"
+                             width="360"
+                             height="360"
+                             title="手の三次元座標座標"
+                             >
+                    </div>
+                    <p>次は動画も試してみた</p>
+
+                    <div class="figure">
+                        <img src="output.gif"
+                             alt="手の動画"
+                             width="360"
+                             height="480"
+                             title="手の動画"
+                             >
+                        <p>手元をスマホで撮影した動画での予想手の座標gif</p>
+                    </div>
+                    <p>それなりに追っている気がする！</p>
+                    <p>手の全体が見えてなくても予想できているのは結構よいのでは!?</p>
+                    <h3>今後の展望</h3>
+                    <p>手の座標が2次元ではなく3次元的に取得しているので3Dの手のモデルがあれば重ねて表示できるのでは??まだわからんけど!!!!</p>
+                    <p>でもこれができるとカードゲームとか手元配信ができるようになるともっと活動の幅もしくはVtuberとしての表現が広がるのでは!!??</p>
+                    <p>手元配信が超美麗ではなくなる日を目指して!!</p>
                 <h2 id="make">制作物</h2>
                 <ul>
                     <li>このホームページ</li>
@@ -109,6 +161,8 @@
         </div>
 
 	</main>
+    <!-- こんにちはhtmlの中身まで見にいらした奇特なお方。 -->
+    <!-- 面接まで行けるといいな...|дﾟ)ﾁﾗｯ -->
 
 	<footer>
 		<p>&copy; 2023 Goshi Taketsugu</p>
