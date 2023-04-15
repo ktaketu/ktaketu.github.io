@@ -134,6 +134,9 @@ a:hover {
   }
   
 .btn:hover {
-	background-color: #333;
+	background-color: #949494;
 }
-  
+
+.image-container {
+	display: flex;
+}
